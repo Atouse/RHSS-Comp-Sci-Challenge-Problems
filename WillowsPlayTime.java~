@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+
+public class WillowsPlayTime{
+  public static void main(String []args){
+    BufferedReader input=new BufferedReader(new FileReader("cats.txt"));
+    
+    String line=input.readLine();
+    int days=Integer.parseInt(line.substring(0,1));
+    char [] schedule=new char[line.substring(1,2)];
+    for(int i=0;i<schedule.length;i++){
+      line=input.readLine();
+      schedule[i]=line.charAt(0);
+    }
+      
+  }
+}
+    

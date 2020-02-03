@@ -1,0 +1,18 @@
+import java.io.*;
+public class Fractorials{
+  public static void main(String []args) throws IOException{
+    BufferedReader input=new BufferedReader(new FileReader("fractorial.txt"));
+    int [] numbers=new int[5];
+    for(int i=0;i<5;i++){
+      numbers[i]=Integer.parseInt(input.readLine());
+    }//for
+    
+  }//niam
+  
+  public static int fractorial(int num){
+    int counter=1;
+    for(int i=0;i<num;i++){
+    }
+    return 0;
+  }//fractorial method
+}//ssalc

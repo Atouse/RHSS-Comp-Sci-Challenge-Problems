@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+public class BusRoute{
+  public static void main(String []args) throws IOException{
+    Scanner s=new Scanner(System.in);
+    
+    BufferedReader input=new BufferedReader(new FileReader("input.txt"));
+    int totalStops,totalPass,index=0;
+    
+    String line=input.readLine();
+    StringTokenizer num=new StringTokenizer(line);
+    
+    totalStops=Integer.parseInt(num.nextToken());
+    totalPass=Integer.parseInt(num.nextToken());
+    
+    boolean[] route=new boolean [totalStops];
+    int[] pass=new int[totalPass*2];
+    
+    do{
+      line=input.readLine();
+      
+      if(line==null)
+        break;
+      num=new StringTokenizer(line);
+      pass[index]=Integer.parseInt(num.nextToken());
+      pass[index+1]=Integer.parseInt(num.nextToken());
+      index++;
+    }while(line!=null);
+    for(int i=0;i<pass.length;i++){
+      System.out.println(pass[i]);
+    }
+    /*for(int i=0;i<pass.length;i+=2){
+      route[pass[i]]=false;
+      route[pass[i+1]]=true;
+    }//for*/
+    
+    
+  }
+}
